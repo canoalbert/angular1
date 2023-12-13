@@ -8,20 +8,13 @@ export interface MHWWeapons {
   attack: Attack
   elderseal?: string
   attributes: Attributes
-  damageType?: string
+  damageType: string
   name: string
-  durability?: Durability[]
+  durability: Durability[]
   slots: Slot[]
   elements: Element[]
   crafting: Crafting
-  assets?: Assets
-  shelling?: Shelling
-  phial?: Phial
-  boostType?: string
-  specialAmmo?: string
-  deviation?: string
-  ammo?: Ammo[]
-  coatings?: string[]
+  assets: Assets
 }
 
 export interface Attack {
@@ -29,14 +22,7 @@ export interface Attack {
   raw: number
 }
 
-export interface Attributes {
-  affinity: any
-  defense?: number
-  boostType?: string
-  damageType?: string
-  coatings?: string[]
-  elderseal?: string
-}
+export interface Attributes {}
 
 export interface Durability {
   red: number
@@ -95,23 +81,8 @@ export interface Item2 {
 }
 
 export interface Assets {
-  icon?: string
+  icon: string
   image: string
-}
-
-export interface Shelling {
-  type: string
-  level: number
-}
-
-export interface Phial {
-  type: string
-  damage?: number
-}
-
-export interface Ammo {
-  type: string
-  capacities: number[]
 }
 
 

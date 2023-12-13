@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<!-- app.component.html -->
+<div class="container mt-5">
+  <h3 class="text-center">Titles</h3>
+</div>
+<div class="container mt-5">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-3">
+      <a routerLink="/mhw">
+        <div class="card text-center">
+          <img height="250" src="./assets/images/fatalis.jpeg" class="card-img-top" alt="MHW Image">
+          <div class="card-body">
+            <h5 class="card-title">Monster Hunter World</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a routerLink="/pokemon">
+        <div class="card text-center">
+          <img height="250" src="./assets/images/pokemon.jpeg" class="card-img-top" alt="Pokemon Image">
+          <div class="card-body">
+            <h5 class="card-title">Pokemon</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a routerLink="/valorant">
+        <div class="card text-center">
+          <img height="250" src="./assets/images/valorant.jpeg" class="card-img-top" alt="Valorant Image">
+          <div class="card-body">
+            <h5 class="card-title">Valorant</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a routerLink="/space">
+        <div class="card text-center">
+          <img height="250" src="./assets/images/final.jpeg" class="card-img-top" alt="Space Image">
+          <div class="card-body">
+            <h5 class="card-title">Space</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
+

@@ -1,1 +1,22 @@
-<p>pokemon works!</p>
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <h3 class="text-center">Pokemons</h3>
+</div>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class=" col-md-auto" *ngFor="let card of pokemonCards">
+      <div class="card mx-2 my-2" style="width: 18rem;">
+        <img [src]="card.images.small" class="card-img-top" alt="{{ card.name }} Logo">
+        <div class="card-body">
+          <h5 class="card-title">{{ card.name }}</h5>
+          <p class="card-text">HP: {{ card.hp }}</p>
+          <p class="card-text">Types: {{ card.types.join(', ') }}</p>
+          <p class="card-text">Attacks: {{ getAttacksNames(card.attacks) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loading">Cargando...</div>

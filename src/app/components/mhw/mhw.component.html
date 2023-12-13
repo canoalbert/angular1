@@ -1,1 +1,15 @@
-<p>mhw works!</p>
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <h3 class="text-center">Weapons</h3>
+</div>
+
+<div class="card mx-5 mb-4 mt-5 "  *ngFor="let item of mhwData">
+  <img style="width: 100px; height: 100px;"   [src]="item.assets?.image" class="card-img-top" alt="{{ item.name }} Image">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.name }}</h5>
+    <p class="card-text">Attack: {{ item.attack?.raw }}</p>
+  </div>
+</div>
+
+<div class="text-center" *ngIf="loading">Cargando...</div>
+

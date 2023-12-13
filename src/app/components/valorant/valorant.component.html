@@ -1,1 +1,25 @@
-<p>valorant works!</p>
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <h3 class="text-center">Agents</h3>
+</div>
+
+
+<div class="d-flex justify-content-center align-items-center" >
+  <div class="row">
+    <div class="col-md-3" *ngFor="let agent of agents">
+      <div class="card mx-3 mb-3 mt-3">
+        <img [src]="agent.displayIcon" class="card-img-top" alt="{{ agent.displayName }} Image" style="width: 200px; height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ agent.displayName }}</h5>
+          <p class="card-text">{{ agent.description }}</p>
+          <p class="card-text">Developer: {{ agent.developerName }}</p>
+          <p class="card-text">Tags: {{ agent.characterTags?.join(', ') }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loading">Cargando...</div>
+
+

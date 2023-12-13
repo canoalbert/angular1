@@ -1,1 +1,27 @@
-<p>finals-space works!</p>
+<app-navbar></app-navbar>
+<div class="container mt-5">
+    <h3 class="text-center">Characters</h3>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let character of finalSpaceCharacters">
+            <div class="card mx-2 my-2" style="width: 18rem;">
+                <img [src]="character.img_url" class="card-img-top" alt="{{ character.name }} Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ character.name }}</h5>
+                    <p class="card-text">ID: {{ character.id }}</p>
+                    <p class="card-text">Status: {{ character.status }}</p>
+                    <p class="card-text">Species: {{ character.species }}</p>
+                    <p class="card-text">Gender: {{ character.gender }}</p>
+                    <p class="card-text">Hair: {{ character.hair }}</p>
+                    <p class="card-text">Alias: {{ character.alias.join(', ') }}</p>
+                    <p class="card-text">Origin: {{ character.origin }}</p>
+                    <p class="card-text">Abilities: {{ character.abilities.join(', ') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="loading">Cargando...</div>

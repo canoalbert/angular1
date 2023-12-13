@@ -12,6 +12,8 @@ import { MhwComponent } from './components/mhw/mhw.component';
 import { ValorantComponent } from './components/valorant/valorant.component';
 import { FinalsSpaceComponent } from './components/finals-space/finals-space.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
+import {NgOptimizedImage} from "@angular/common";
+import { InicioComponent } from './components/inicio/inicio.component';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
     MhwComponent,
     ValorantComponent,
     FinalsSpaceComponent,
-    PokemonComponent
+    PokemonComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
     HttpClientModule,
     FormsModule,
     NgbModule,
+    NgOptimizedImage,
   ],
   providers: [],
   bootstrap: [AppComponent]
